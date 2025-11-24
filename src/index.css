@@ -1,0 +1,224 @@
+/* Theme 1 From here */
+
+/* @import "tailwindcss";
+
+@theme 
+  {
+  --color-indigo-50: 238 242 255;
+  --color-indigo-100: 224 231 255;
+  --color-indigo-500: 99 102 241;
+  --color-indigo-600: 79 70 229;
+  --color-indigo-700: 67 56 202;
+
+  --color-primary-500: var(--color-indigo-500);
+  --color-primary-600: var(--color-indigo-600);
+  --color-primary-700: var(--color-indigo-700);
+
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-glow: glow 2s ease-in-out infinite;
+  --animate-shimmer: shimmer 1.5s infinite;
+  --animate-gradient: gradientShift 3s ease infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50%      { transform: translateY(-10px); }
+  }
+
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(79, 70, 229, 0.3); }
+    50%      { box-shadow: 0 0 40px rgba(79, 70, 229, 0.6); }
+  }
+
+  @keyframes shimmer {
+    0%   { background-position: -200px 0; }
+    100% { background-position: calc(200px + 100%) 0; }
+  }
+
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50%      { background-position: 100% 50%; }
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(79, 70, 229, 0.6);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+.glow-animation {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #4f46e5, #7c3aed, #ec4899, #f59e0b);
+  background-size: 300% 300%;
+  animation: gradientShift 3s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@layer utilities {
+  .animate-float { animation: var(--animate-float); }
+  .animate-glow { animation: var(--animate-glow); }
+  .animate-shimmer { animation: var(--animate-shimmer); }
+  .animate-gradient { animation: var(--animate-gradient); }
+
+  .bg-indigo-50  { background-color: rgb(var(--color-indigo-50)); }
+  .bg-indigo-100 { background-color: rgb(var(--color-indigo-100)); }
+  .bg-indigo-500 { background-color: rgb(var(--color-indigo-500)); }
+  .bg-indigo-600 { background-color: rgb(var(--color-indigo-600)); }
+  .bg-indigo-700 { background-color: rgb(var(--color-indigo-700)); }
+
+} */
+
+
+/* Theme 1 Till here */
+
+
+/* theme 2 from here */
+
+
+
+/* @import "tailwindcss";
+
+@theme {
+
+  --color-rp-blue:   #0D4DE3;
+  --color-rp-navy:   #02042A;
+  --color-rp-pink:   #F22FB0;
+  --color-rp-yellow: #FFC83D;
+
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+
+  --spacing-18: 4.5rem;
+  --animate-fade-in: fadeIn 0.7s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(1rem); }
+  to   { opacity: 1; transform: translateY(0); }
+} */
+
+
+
+/* theme 2 till here */
+
+
+
+/* theme 3 from here */
+
+@import "tailwindcss";
+
+/* ------------------------
+   🎨 Design Tokens
+   ------------------------ */
+@theme {
+  --color-primary: #0A2540;
+  --color-fintech: #1A73E8;
+
+  --color-brand-100: #e8f0fe;
+  --color-brand-200: #c6dafc;
+  --color-brand-300: #90b5f8;
+  --color-brand-400: #5a90f3;
+  --color-brand-500: #1a73e8;
+  --color-brand-600: #0d47a1;
+
+  --font-heading: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* ------------------------
+   🟦 Global Styles
+   ------------------------ */
+
+@layer base {
+  html {
+    font-family: var(--font-body);
+  }
+}
+
+/* ------------------------
+   🔵 Custom Utilities
+   ------------------------ */
+@utility heading-1 {
+  @apply text-5xl font-extrabold leading-tight text-gray-900;
+}
+
+@utility heading-2 {
+  @apply text-3xl font-bold text-gray-800;
+}
+
+@utility fintech-button {
+  @apply bg-fintech text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition;
+}
+
+@utility secondary-button {
+  @apply border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition;
+}
+
+/* ------------------------
+   🌈 Hero Gradient
+   ------------------------ */
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(135deg, #0A1F44 0%, #0D47A1 100%);
+  }
+}
+
+
+
+
+/* theme 3 till here */
